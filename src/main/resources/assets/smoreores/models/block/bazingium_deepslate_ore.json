@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "smoreores:block/bazingium_deepslate_ore"
+  }
+}
