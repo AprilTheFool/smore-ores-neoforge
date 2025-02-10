@@ -6,5 +6,9 @@
   "block.smoreores.bazingium_ore": "Bazingium Ore",
   "block.smoreores.bazingium_deepslate_ore": "Bazingium Deepslate Ore",
 
-  "block.smoreores.magic_block": "Molecular Energizer"
+  "block.smoreores.magic_block": "Molecular Energizer",
+
+  "tooltip.smoreores.magic_block.tooltip": "It looks pretty techy, wonder what it does..",
+  "tooltip.smoreores.raw_bazingium.tooltip": "It feels like its... judging you..",
+  "tooltip.smoreores.bazingium.tooltip": "It feels like its... judging you.."
 }
