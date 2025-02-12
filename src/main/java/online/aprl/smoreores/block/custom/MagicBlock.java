@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import online.aprl.smoreores.item.ModItems;
+import online.aprl.smoreores.util.ModTags;
 
 import java.util.List;
 
@@ -41,11 +42,11 @@ public class MagicBlock extends Block {
         if(entity instanceof ItemEntity itemEntity) {
 
             // Check if the entity is a supported item and convert it
-            if(itemEntity.getItem().getItem() == ModItems.RAW_BAZINGIUM.get()) {
+            if(isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem( new ItemStack(Items.DIAMOND, itemEntity.getItem().getCount()));
             }
 
-            if(itemEntity.getItem().getItem() == ModItems.BAZINGIUM.get()) {
+            if(itemEntity.getItem().getItem() == ModItems.RAW_BAZINGIUM.get()) {
                 itemEntity.setItem( new ItemStack(Items.EMERALD, itemEntity.getItem().getCount()));
             }
 
@@ -56,6 +57,10 @@ public class MagicBlock extends Block {
         }
 
         super.stepOn(level, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
